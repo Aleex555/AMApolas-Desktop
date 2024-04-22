@@ -35,7 +35,7 @@ class _LanguagePageState extends State<LanguagePage> {
   }
 
   _fetchLanguages() async {
-    var url = Uri.parse('http://localhost:3000/api/languages');
+    var url = Uri.parse('https://roscodrom6.ieti.site/api/languages');
     try {
       var response = await http.get(url);
       if (response.statusCode == 200) {
@@ -106,8 +106,8 @@ class _WordPageState extends State<WordPage> {
   }
 
   void _fetchWords(String letter) async {
-    var url =
-        Uri.parse('http://localhost:3000/api/words/${widget.language}/$letter');
+    var url = Uri.parse(
+        'https://roscodrom6.ieti.site/api/words/${widget.language}/$letter');
     try {
       var response = await http.get(url);
       if (response.statusCode == 200) {
